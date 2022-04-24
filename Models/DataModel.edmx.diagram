@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="094bb9e59f074284b1957b3a1cceff9a" Name="Diagram1">
+        <EntityTypeShape EntityType="FoodyDatabaseModel.Category" Width="1.5" PointX="0.75" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodyDatabaseModel.External_Order" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodyDatabaseModel.Food_Items" Width="1.5" PointX="3" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodyDatabaseModel.Order_Details" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodyDatabaseModel.User" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="FoodyDatabaseModel.FK__Food_Item__cat_t__2A4B4B5E" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodyDatabaseModel.FK__External___user___25869641" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodyDatabaseModel.FK__Order_Det__order__2D27B809" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodyDatabaseModel.FK__Order_Det__food___2E1BDC42" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

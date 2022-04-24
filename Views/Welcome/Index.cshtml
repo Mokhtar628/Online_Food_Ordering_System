@@ -1,0 +1,9 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Welcome</h2>
+
+@Html.ActionLink("user", "Login", "Users", new { area = "" }, new { @class = "logInButton" })
+@Html.ActionLink("admin", "Login", "Admin", new { area = "" }, new { @class = "SignUpButton" })
