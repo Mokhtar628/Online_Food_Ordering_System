@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FoodyDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="cat_id" />
+    </Key>
+    <Property Name="cat_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="External_Order">
+    <Key>
+      <PropertyRef Name="order_id" />
+    </Key>
+    <Property Name="order_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date" Type="date" />
+    <Property Name="Total_cost" Type="int" />
+    <Property Name="Status" Type="varchar" MaxLength="20" />
+    <Property Name="user_email" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Food_Items">
+    <Key>
+      <PropertyRef Name="food_id" />
+    </Key>
+    <Property Name="food_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+    <Property Name="price" Type="int" />
+    <Property Name="preparing_time" Type="int" />
+    <Property Name="description" Type="varchar" MaxLength="100" />
+    <Property Name="available" Type="int" />
+    <Property Name="img" Type="varchar" MaxLength="50" />
+    <Property Name="cat_type" Type="int" />
+  </EntityType>
+  <EntityType Name="Order_Details">
+    <Key>
+      <PropertyRef Name="order_id" />
+      <PropertyRef Name="food_id" />
+    </Key>
+    <Property Name="order_id" Type="int" Nullable="false" />
+    <Property Name="food_id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="price" Type="int" />
+    <Property Name="quantity" Type="int" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Email" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+    <Property Name="pass" Type="varchar" MaxLength="50" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="img" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__External___user___25869641">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="External_Order" Type="Self.External_Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Email" />
+      </Principal>
+      <Dependent Role="External_Order">
+        <PropertyRef Name="user_email" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Food_Item__cat_t__2A4B4B5E">
+    <End Role="Category" Type="Self.Category" Multiplicity="0..1" />
+    <End Role="Food_Items" Type="Self.Food_Items" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="cat_id" />
+      </Principal>
+      <Dependent Role="Food_Items">
+        <PropertyRef Name="cat_type" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Order_Det__food___2E1BDC42">
+    <End Role="Food_Items" Type="Self.Food_Items" Multiplicity="1" />
+    <End Role="Order_Details" Type="Self.Order_Details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Food_Items">
+        <PropertyRef Name="food_id" />
+      </Principal>
+      <Dependent Role="Order_Details">
+        <PropertyRef Name="food_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Order_Det__order__2D27B809">
+    <End Role="External_Order" Type="Self.External_Order" Multiplicity="1" />
+    <End Role="Order_Details" Type="Self.Order_Details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="External_Order">
+        <PropertyRef Name="order_id" />
+      </Principal>
+      <Dependent Role="Order_Details">
+        <PropertyRef Name="order_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="FoodyDatabaseModelStoreContainer">
+    <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="External_Order" EntityType="Self.External_Order" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Food_Items" EntityType="Self.Food_Items" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Order_Details" EntityType="Self.Order_Details" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__External___user___25869641" Association="Self.FK__External___user___25869641">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="External_Order" EntitySet="External_Order" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Food_Item__cat_t__2A4B4B5E" Association="Self.FK__Food_Item__cat_t__2A4B4B5E">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="Food_Items" EntitySet="Food_Items" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Order_Det__food___2E1BDC42" Association="Self.FK__Order_Det__food___2E1BDC42">
+      <End Role="Food_Items" EntitySet="Food_Items" />
+      <End Role="Order_Details" EntitySet="Order_Details" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Order_Det__order__2D27B809" Association="Self.FK__Order_Det__order__2D27B809">
+      <End Role="External_Order" EntitySet="External_Order" />
+      <End Role="Order_Details" EntitySet="Order_Details" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
