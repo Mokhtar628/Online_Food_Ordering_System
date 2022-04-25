@@ -15,7 +15,9 @@ namespace Online_Food_Ordering_System.Controllers
 
         protected void OpenSessions(User foodyDatabaseEntities)
         {
-            Session["ID"] = foodyDatabaseEntities.id.ToString();
+            Session["id"] = foodyDatabaseEntities.id.ToString();
+            Session["name"] = foodyDatabaseEntities.name.ToString();
+            Session["img"] = foodyDatabaseEntities.img.ToString();
         }
 
         protected void DisplayWrongDataError()

@@ -1,0 +1,38 @@
+﻿body {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: #F4F4F4 !important;
+}
+
+.form-div {
+    margin-top: 15%
+}
+
+.form-group {
+    margin-left: 10vh !important;
+}
+
+.form-control {
+    border-radius: 0px !important;
+}
+
+label {
+    width: 100%;
+    text-align: left;
+    margin-left: 15px
+}
+
+.btn-default {
+    background: #00fff2 !important;
+    box-shadow: inset 0 -2px #03f3e6 !important;
+    color: white !important
+}
+
+    .btn-default:active {
+        background: #00fff2 !important;
+    }
+
+    .btn-default:hover {
+        background: #03f3e6 !important;
+    }

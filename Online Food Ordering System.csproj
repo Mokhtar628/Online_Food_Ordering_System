@@ -104,7 +104,13 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\LoginAndSignup\LoginAndSignupStyles.css" />
+    <Content Include="Content\NavBarAndFooter\NavBatAndFooterStyles.css" />
+    <Content Include="Content\pageImages\icon.png" />
+    <Content Include="Content\pageImages\moto.gif" />
+    <Content Include="Content\pageImages\signBack.jpg" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\Welcome\welcomeStyles.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Models\DataModel.Context.tt">
@@ -121,6 +127,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="UsersImage\profImg.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -191,7 +198,7 @@
     </Content>
     <None Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\NavAndFooter.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
