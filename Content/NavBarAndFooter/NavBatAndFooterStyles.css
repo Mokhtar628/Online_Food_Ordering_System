@@ -1,0 +1,65 @@
+﻿.navbar-brand {
+    margin: 0px !important;
+    padding: 6px !important;
+}
+
+.navbar{
+    height:40px
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.background-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0px !important;
+    margin: 0px !important;
+    max-width: 100% !important;
+    transform: scale(1.1);
+}
+
+html {
+    overflow: hidden;
+}
+
+
+
+.ZeroMarginAndPadding {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.nav-style {
+    position: sticky;
+    background-color: #1c1c20;
+    z-index: 5;
+    height: 52px;
+    padding: 0px;
+}
+
+
+.nav-buttons {
+    float: right;
+    padding: 15px 15px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    padding-bottom: 3px;
+    border-bottom: 2px solid transparent;
+}
+
+    .nav-buttons a {
+        color: #00fff2;
+    }
+
+.navbar-header {
+    width: 100%;
+}
+
+.navbar-brand {
+    color: #00fff2;
+}

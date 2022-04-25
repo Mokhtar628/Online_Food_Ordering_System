@@ -11,7 +11,8 @@ namespace Online_Food_Ordering_System.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Web;
+
     public partial class User
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -26,7 +27,9 @@ namespace Online_Food_Ordering_System.Models
         public string Type { get; set; }
         public string img { get; set; }
         public string Email { get; set; }
-    
+
+        public HttpPostedFileBase ImageFile { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<External_Order> External_Order { get; set; }
     }
