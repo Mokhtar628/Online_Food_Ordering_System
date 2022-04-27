@@ -226,6 +226,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\External_OrderController.cs" />
     <Compile Include="Controllers\Food_ItemsController.cs" />
     <Compile Include="Controllers\PersonController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
@@ -286,6 +287,7 @@
     <Content Include="Views\Food_Items\Edit.cshtml" />
     <Content Include="Views\Food_Items\Index.cshtml" />
     <Content Include="Views\Food_Items\SearchByType.cshtml" />
+    <Content Include="Views\External_Order\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
