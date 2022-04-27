@@ -11,7 +11,8 @@ namespace Online_Food_Ordering_System.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Web;
+
     public partial class Food_Items
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -28,7 +29,10 @@ namespace Online_Food_Ordering_System.Models
         public Nullable<int> available { get; set; }
         public string img { get; set; }
         public Nullable<int> cat_type { get; set; }
-    
+
+
+        public HttpPostedFileBase ImageFile { get; set; }
+
         public virtual Category Category { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order_Details> Order_Details { get; set; }
