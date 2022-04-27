@@ -1,0 +1,104 @@
+﻿@model Online_Food_Ordering_System.Models.Food_Items
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/NavBarAndFooter/NavBatAndFooterStyles.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <style>
+        body {
+            background-color:lightgoldenrodyellow
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar navbar-fixed-top nav-style">
+        <div class="container">
+            <div class="navbar-header">
+                <span class="navbar-brand"><img src="~/Content/pageImages/icon.png" alt="Foody" style="width:40px" /> Foody</span>
+                <span class="nav-buttons">
+                    <a href="/Admin/Login"><span class="glyphicon glyphicon-user"></span> Admin</a>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h3>Are you sure you want to delete this?</h3>
+        <div>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.name)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.name)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.price)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.price)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.preparing_time)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.preparing_time)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.description)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.description)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.available)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.available)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Category.name)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Category.name)
+                </dd>
+
+            </dl>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-danger" /> |
+                <a class="btn btn-default" href="/Food_Items?">Back to List</a>
+            </div>
+            }
+        </div>
+    </div>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
