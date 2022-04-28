@@ -12,22 +12,6 @@ namespace Online_Food_Ordering_System.Controllers
         public abstract ActionResult Login();
         public abstract ActionResult Login(User obj);
         public abstract ActionResult GoToHome();
-
-        protected void OpenSessions(User foodyDatabaseEntities)
-        {
-            Session["id"] = foodyDatabaseEntities.id.ToString();
-            Session["name"] = foodyDatabaseEntities.name.ToString();
-            Session["img"] = foodyDatabaseEntities.img.ToString();
-        }
-
-        protected void DisplayWrongDataError()
-        {
-            ModelState.AddModelError("LoginError", "Sorry, you entered incorrect data.");
-        }
-
-        protected ActionResult NavigateToAnthorView(String viewPath)
-        {
-            return View(viewPath);
-        }
+        
     }
 }

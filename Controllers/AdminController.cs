@@ -7,7 +7,7 @@ using System.Web.Mvc;
 
 namespace Online_Food_Ordering_System.Controllers
 {
-    public class AdminController : PersonController
+    public class AdminController : PersonController, SessionsController
     {
         private FoodyDatabaseEntities databaseEntityObject = new FoodyDatabaseEntities();
 
@@ -34,7 +34,7 @@ namespace Online_Food_Ordering_System.Controllers
                 }
                 else
                 {
-                    DisplayWrongDataError();
+                    new ErrorMessagesController().DisplayWrongDataError();
                 }
             }
             return View(user);
@@ -47,7 +47,7 @@ namespace Online_Food_Ordering_System.Controllers
         {
             if (Session["ID"] != null)
             {
-                return NavigateToAnthorView("~/Views/Admin/AdminHome.cshtml");
+                return new NavigatorController().NavigateToAnthorView("~/Views/Users/UserHome.cshtml");
             }
             else
             {
@@ -63,6 +63,13 @@ namespace Online_Food_Ordering_System.Controllers
                 databaseEntityObject.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        public void OpenSessions(User foodyDatabaseEntities)
+        {
+            Session["id"] = foodyDatabaseEntities.id.ToString();
+            Session["name"] = foodyDatabaseEntities.name.ToString();
+            Session["img"] = foodyDatabaseEntities.img.ToString();
         }
     }
 }

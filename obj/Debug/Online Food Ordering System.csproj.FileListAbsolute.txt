@@ -120,25 +120,6 @@ X:\FCIH Mohammed\level 3 semester 2\Projects\Online_Food_Ordering_System\Online_
 X:\FCIH Mohammed\level 3 semester 2\Projects\Online_Food_Ordering_System\Online_Food_Ordering_System\bin\roslyn\vbc.rsp
 X:\FCIH Mohammed\level 3 semester 2\Projects\Online_Food_Ordering_System\Online_Food_Ordering_System\bin\roslyn\VBCSCompiler.exe
 X:\FCIH Mohammed\level 3 semester 2\Projects\Online_Food_Ordering_System\Online_Food_Ordering_System\bin\roslyn\VBCSCompiler.exe.config
-X:\FCIH Mohammed\level 3 semester 2\Projects\Online_Food_Ordering_System\Online_Food_Ordering_System\bin\EntityFramework.dll
-X:\FCIH Mohammed\level 3 semester 2\Projects\Online_Food_Ordering_System\Online_Food_Ordering_System\bin\EntityFramework.SqlServer.dll
-X:\FCIH Mohammed\level 3 semester 2\Projects\Online_Food_Ordering_System\Online_Food_Ordering_System\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-X:\FCIH Mohammed\level 3 semester 2\Projects\Online_Food_Ordering_System\Online_Food_Ordering_System\bin\Microsoft.Web.Infrastructure.dll
-X:\FCIH Mohammed\level 3 semester 2\Projects\Online_Food_Ordering_System\Online_Food_Ordering_System\bin\System.Web.Helpers.dll
-X:\FCIH Mohammed\level 3 semester 2\Projects\Online_Food_Ordering_System\Online_Food_Ordering_System\bin\System.Web.Mvc.dll
-X:\FCIH Mohammed\level 3 semester 2\Projects\Online_Food_Ordering_System\Online_Food_Ordering_System\bin\System.Web.Razor.dll
-X:\FCIH Mohammed\level 3 semester 2\Projects\Online_Food_Ordering_System\Online_Food_Ordering_System\bin\System.Web.Webpages.Deployment.dll
-X:\FCIH Mohammed\level 3 semester 2\Projects\Online_Food_Ordering_System\Online_Food_Ordering_System\bin\System.Web.Webpages.dll
-X:\FCIH Mohammed\level 3 semester 2\Projects\Online_Food_Ordering_System\Online_Food_Ordering_System\bin\System.Web.Webpages.Razor.dll
-X:\FCIH Mohammed\level 3 semester 2\Projects\Online_Food_Ordering_System\Online_Food_Ordering_System\bin\EntityFramework.xml
-X:\FCIH Mohammed\level 3 semester 2\Projects\Online_Food_Ordering_System\Online_Food_Ordering_System\bin\EntityFramework.SqlServer.xml
-X:\FCIH Mohammed\level 3 semester 2\Projects\Online_Food_Ordering_System\Online_Food_Ordering_System\bin\System.Web.Razor.xml
-X:\FCIH Mohammed\level 3 semester 2\Projects\Online_Food_Ordering_System\Online_Food_Ordering_System\bin\System.Web.Webpages.xml
-X:\FCIH Mohammed\level 3 semester 2\Projects\Online_Food_Ordering_System\Online_Food_Ordering_System\bin\System.Web.Webpages.Deployment.xml
-X:\FCIH Mohammed\level 3 semester 2\Projects\Online_Food_Ordering_System\Online_Food_Ordering_System\bin\System.Web.Webpages.Razor.xml
-X:\FCIH Mohammed\level 3 semester 2\Projects\Online_Food_Ordering_System\Online_Food_Ordering_System\bin\System.Web.Helpers.xml
-X:\FCIH Mohammed\level 3 semester 2\Projects\Online_Food_Ordering_System\Online_Food_Ordering_System\bin\System.Web.Mvc.xml
-X:\FCIH Mohammed\level 3 semester 2\Projects\Online_Food_Ordering_System\Online_Food_Ordering_System\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 X:\FCIH Mohammed\level 3 semester 2\Projects\Online_Food_Ordering_System\Online_Food_Ordering_System\obj\Debug\Online Food Ordering System.csproj.CoreCompileInputs.cache
 X:\FCIH Mohammed\level 3 semester 2\Projects\Online_Food_Ordering_System\Online_Food_Ordering_System\obj\Debug\Online Food Ordering System.csproj.CopyComplete
 X:\FCIH Mohammed\level 3 semester 2\Projects\Online_Food_Ordering_System\Online_Food_Ordering_System\obj\Debug\Online Food Ordering System.dll
@@ -197,3 +178,4 @@ E:\faculty\level 3\second term\sw2\Online_Food_Ordering_System\Online_Food_Order
 E:\faculty\level 3\second term\sw2\Online_Food_Ordering_System\Online_Food_Ordering_System\obj\Debug\Online Food Ordering System.dll
 E:\faculty\level 3\second term\sw2\Online_Food_Ordering_System\Online_Food_Ordering_System\obj\Debug\Online Food Ordering System.pdb
 E:\faculty\level 3\second term\sw2\Online_Food_Ordering_System\Online_Food_Ordering_System\obj\Debug\Online Food Ordering System.csprojAssemblyReference.cache
+X:\FCIH Mohammed\level 3 semester 2\Projects\Online_Food_Ordering_System\Online_Food_Ordering_System\obj\Debug\Online Food Ordering System.csprojAssemblyReference.cache

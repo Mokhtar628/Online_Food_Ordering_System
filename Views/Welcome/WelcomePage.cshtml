@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "Welcome";
+}
+
+<link rel="stylesheet" type="text/css" href="~/Content/Welcome/welcomeStyles.css">
+
+<div class="background-image">
+    <img src="~/Content/pageImages/signBack.jpg" style="padding:0px;margin:0px;width:100%;filter: blur(3px);-webkit-filter: blur(3px);" />
+
+    <div class="bg-text">
+        <div class="container">
+            <div class="row">
+                <div class="neons col-12">
+                    <h1><em>Online Foody</em></h1>
+                </div>
+            </div>
+            <div class="row" style="margin-top:5%">
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <center>
+
+                        <a href="/Users/Login"><button type="button" class="btn btn-outline-primary mokh-btn-outline">Login</button></a>
+                        <a href="/Users/CreateUser"><button type="button" class="btn btn-outline-primary mokh-btn-outline mo">Signup</button></a>
+
+
+                    </center>
+                </div>
+                <div class="col-4"></div>
+            </div>
+        </div>
+
+    </div>
+    @*<h2>Welcome</h2>
+
+        @Html.ActionLink("user", "Login", "Users", new { area = "" }, new { @class = "logInButton" })
+        @Html.ActionLink("admin", "Login", "Admin", new { area = "" }, new { @class = "SignUpButton" })*@
+</div>
