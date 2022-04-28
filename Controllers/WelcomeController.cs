@@ -9,7 +9,7 @@ namespace Online_Food_Ordering_System.Controllers
     public class WelcomeController : Controller
     {
         // GET: Welcome
-        public ActionResult Index()
+        public ActionResult WelcomePage()
         {
             return View();
         }

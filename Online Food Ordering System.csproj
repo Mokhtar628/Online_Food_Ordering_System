@@ -221,14 +221,17 @@
     <Content Include="Views\Users\UserHome.cshtml" />
     <Content Include="Views\Admin\AdminHome.cshtml" />
     <Content Include="Views\Admin\Login.cshtml" />
-    <Content Include="Views\Welcome\Index.cshtml" />
+    <Content Include="Views\Welcome\Welcome.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\ErrorMessagesController.cs" />
     <Compile Include="Controllers\External_OrderController.cs" />
     <Compile Include="Controllers\Food_ItemsController.cs" />
+    <Compile Include="Controllers\NavigatorController.cs" />
     <Compile Include="Controllers\PersonController.cs" />
+    <Compile Include="Controllers\SessionsController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Controllers\WelcomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -288,6 +291,7 @@
     <Content Include="Views\Food_Items\Index.cshtml" />
     <Content Include="Views\Food_Items\SearchByType.cshtml" />
     <Content Include="Views\External_Order\Index.cshtml" />
+    <Content Include="Views\Welcome\WelcomePage.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -296,7 +300,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Views\ErrorMessages\" />
+    <Folder Include="Views\Navigator\" />
     <Folder Include="Views\Person\" />
+    <Folder Include="Views\Sessions\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
