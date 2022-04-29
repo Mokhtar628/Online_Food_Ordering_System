@@ -47,7 +47,7 @@ namespace Online_Food_Ordering_System.Controllers
         {
             if (Session["ID"] != null)
             {
-                return new NavigatorController().NavigateToAnthorView("~/Views/Users/UserHome.cshtml");
+                return new NavigatorController().NavigateToAnthorView("~/Views/Admin/AdminHome.cshtml");
             }
             else
             {

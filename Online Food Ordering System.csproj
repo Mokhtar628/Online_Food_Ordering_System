@@ -157,6 +157,7 @@
     <Content Include="bin\System.Web.Webpages.Razor.dll" />
     <Content Include="bin\System.Web.Webpages.Razor.xml" />
     <Content Include="bin\System.Web.Webpages.xml" />
+    <Content Include="Content\AdminHome\background.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -292,6 +293,7 @@
     <Content Include="Views\Food_Items\SearchByType.cshtml" />
     <Content Include="Views\External_Order\Index.cshtml" />
     <Content Include="Views\Welcome\WelcomePage.cshtml" />
+    <Content Include="Views\Users\ViewAllUsers.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

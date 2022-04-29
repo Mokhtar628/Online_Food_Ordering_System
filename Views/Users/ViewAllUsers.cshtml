@@ -1,0 +1,72 @@
+﻿@model IEnumerable<Online_Food_Ordering_System.Models.User>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/NavBarAndFooter/NavBatAndFooterStyles.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <style>
+        .card mb-3 {
+            padding: 20px;
+        }
+
+        .card-img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-fixed-top nav-style">
+        <div class="container">
+            <div class="navbar-header">
+                <span class="navbar-brand"><img src="~/Content/pageImages/icon.png" alt="Foody" style="width:40px" /> Foody</span>
+                <span class="nav-buttons">
+                    @Html.ActionLink("Home", "GoToHome", "Admin")
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        @if (Model.Count() == 0)
+        {
+            <p colspan="3" style="color:red">
+                No Match Document
+            </p>
+        }
+        else
+        {
+            foreach (var item in Model)
+            {
+                <div class="card mb-3" style="max-width: 540px; margin:50px 0;">
+                    <div class="row no-gutters">
+                        <div class="col-md-4" style="width=50px">
+                            <img src="@Url.Content(item.img)" class="card-img">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h4 class="card-title"><b>@item.name</b></h4>
+                                <p class="card-text">@item.id</p>
+                                <p class="card-text"><small class="text-muted">@item.pass</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+
+    </div>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
