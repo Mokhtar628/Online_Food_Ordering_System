@@ -228,6 +228,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\ErrorMessagesController.cs" />
     <Compile Include="Controllers\External_OrderController.cs" />
     <Compile Include="Controllers\Food_ItemsController.cs" />
@@ -306,6 +307,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Views\Cart\" />
     <Folder Include="Views\ErrorMessages\" />
     <Folder Include="Views\GetGategoriesOfFood\" />
     <Folder Include="Views\Navigator\" />

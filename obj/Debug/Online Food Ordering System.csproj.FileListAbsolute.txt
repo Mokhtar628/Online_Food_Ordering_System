@@ -282,8 +282,8 @@ E:\3rd 2nd\Online_Food_Ordering_System\Online_Food_Ordering_System\bin\roslyn\vb
 E:\3rd 2nd\Online_Food_Ordering_System\Online_Food_Ordering_System\bin\roslyn\vbc.rsp
 E:\3rd 2nd\Online_Food_Ordering_System\Online_Food_Ordering_System\bin\roslyn\VBCSCompiler.exe
 E:\3rd 2nd\Online_Food_Ordering_System\Online_Food_Ordering_System\bin\roslyn\VBCSCompiler.exe.config
-E:\3rd 2nd\Online_Food_Ordering_System\Online_Food_Ordering_System\obj\Debug\Online Food Ordering System.csprojAssemblyReference.cache
 E:\3rd 2nd\Online_Food_Ordering_System\Online_Food_Ordering_System\obj\Debug\Online Food Ordering System.csproj.CoreCompileInputs.cache
 E:\3rd 2nd\Online_Food_Ordering_System\Online_Food_Ordering_System\obj\Debug\Online Food Ordering System.csproj.CopyComplete
 E:\3rd 2nd\Online_Food_Ordering_System\Online_Food_Ordering_System\obj\Debug\Online Food Ordering System.dll
 E:\3rd 2nd\Online_Food_Ordering_System\Online_Food_Ordering_System\obj\Debug\Online Food Ordering System.pdb
+E:\3rd 2nd\Online_Food_Ordering_System\Online_Food_Ordering_System\obj\Debug\Online Food Ordering System.csprojAssemblyReference.cache

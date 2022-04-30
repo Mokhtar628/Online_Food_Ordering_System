@@ -11,6 +11,7 @@ namespace Online_Food_Ordering_System.Controllers
     {
         // GET: GetFoodCatecories
         private FoodyDatabaseEntities db = new FoodyDatabaseEntities();
+        
         public ActionResult Index()
         {
             return View();
@@ -29,6 +30,13 @@ namespace Online_Food_Ordering_System.Controllers
             ViewBag.foodItem = foodItem;
             return View();
         }
+
+        public ActionResult calladdtocart(int id)
+        {
+            CartController.Addtocart(id);
+            return RedirectToAction("getFoodCategories");
+        }
+
 
     }
 }

@@ -51,7 +51,8 @@
                                 </p>
                             </div>
                             <div class="col-xs-12 col-md-6">
-                                <a class="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
+                                @*<a class="btn btn-success" href="@Url.Action("Addtocart", "GetFoodCatecories", new { id = item.cat_type })">Add to cart</a>*@
+                                @Html.ActionLink("addtocart", "calladdtocart", "GetFoodCatecories", new { id = item.food_id },null)
                             </div>
                         </div>
                     </div>
