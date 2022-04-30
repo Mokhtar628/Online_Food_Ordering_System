@@ -169,6 +169,8 @@
     <Content Include="Content\pageImages\icon.png" />
     <Content Include="Content\pageImages\moto.gif" />
     <Content Include="Content\pageImages\signBack.jpg" />
+    <Content Include="Content\showFoodStyle\JavaScript.js" />
+    <Content Include="Content\showFoodStyle\ShowFoodInCategory.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\Welcome\welcomeStyles.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -294,7 +296,8 @@
     <Content Include="Views\Food_Items\SearchByType.cshtml" />
     <Content Include="Views\External_Order\Index.cshtml" />
     <Content Include="Views\Welcome\WelcomePage.cshtml" />
-    <Content Include="Views\ShowFood\ShowFoodInCategory.cshtml" />
+    <Content Include="Views\GetFoodCatecories\getFoodCategories.cshtml" />
+    <Content Include="Views\GetFoodCatecories\getFoodItems.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -304,11 +307,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\ErrorMessages\" />
-    <Folder Include="Views\GetFoodCatecories\" />
     <Folder Include="Views\GetGategoriesOfFood\" />
     <Folder Include="Views\Navigator\" />
     <Folder Include="Views\Person\" />
     <Folder Include="Views\Sessions\" />
+    <Folder Include="Views\ShowFood\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

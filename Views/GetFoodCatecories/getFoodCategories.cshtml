@@ -1,0 +1,62 @@
+﻿@model IEnumerable<Online_Food_Ordering_System.Models.Category>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ShowFoodInCategory</title>
+    <link href="~/Content/showFoodStyle/ShowFoodInCategory.css" rel="stylesheet" />
+    <script src="~/Content/showFoodStyle/JavaScript.js"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" data-inprogress="">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="well well-sm">
+            <strong>Display</strong>
+            <div class="btn-group">
+                <a href="#" id="list" class="btn btn-default btn-sm">
+                    <span class="glyphicon glyphicon-th-list">
+                    </span>List
+                </a> <a href="#" id="grid" class="btn btn-default btn-sm">
+                    <span class="glyphicon glyphicon-th"></span>Grid
+                </a>
+            </div>
+        </div>
+        <div id="products" class="row list-group">
+            <h2>Categories</h2>
+            @foreach (var item in Model)
+            {
+                <div class="item  col-xs-4 col-lg-4">
+                    <div class="thumbnail">
+                        <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
+                        <div class="caption">
+                            <h4 class="group inner list-group-item-heading">
+                                @item.cat_id
+                            </h4>
+                            <p class="group inner list-group-item-text">
+
+                            </p>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <p class="lead">
+                                        @item.name
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    @using (Html.BeginForm("getFoodItems", "GetFoodCatecories", FormMethod.Get))
+                                    {
+                                    <a class="btn btn-success" href="@Url.Action("getFoodItems", "GetFoodCatecories", new { id = item.cat_id })">go to items</a>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+</body>
+</html>

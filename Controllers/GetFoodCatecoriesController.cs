@@ -10,14 +10,25 @@ namespace Online_Food_Ordering_System.Controllers
     public class GetFoodCatecoriesController : Controller
     {
         // GET: GetFoodCatecories
+        private FoodyDatabaseEntities db = new FoodyDatabaseEntities();
         public ActionResult Index()
         {
             return View();
         }
-        public List<string> getFoodCategories(Category category)
+        public ActionResult getFoodCategories()
         {
-            List<string> foodCategories = new List<string>();
-            return foodCategories;
+            return View(db.Categories);
         }
+        [HttpGet]
+        public ActionResult getFoodItems(int id)
+        {
+            List<Food_Items> foodItem = new List<Food_Items>();
+            foodItem = (from obj in db.Food_Items
+                        where obj.cat_type == id
+                        select obj).ToList();
+            ViewBag.foodItem = foodItem;
+            return View();
+        }
+
     }
 }
