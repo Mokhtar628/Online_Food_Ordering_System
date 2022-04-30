@@ -78,7 +78,6 @@ marquee {
 .mo {
     margin-left: 6px;
 }
-
 @media (max-width:400px) {
     .neons h1 {
         font-size: 6rem;

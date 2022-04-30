@@ -34,7 +34,7 @@
                     @Html.ActionLink("Add Food", "Create")
                 </span>
                 <span class="nav-buttons">
-                    <a href="/Admin/Login"><span class="glyphicon glyphicon-user"></span> Admin</a>
+                    @Html.ActionLink("Home", "GoToHome", "Admin")
                 </span>
                 <span class="nav-buttons">
                     <ul class="navbar-nav">
@@ -43,13 +43,13 @@
                                 Food categories
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                @Html.ActionLink("meat", "SearchByType",new { type = 1 }, new { @class = "dropdown-item" })
+                                @Html.ActionLink("meat", "SearchByType", new { type = 1 }, new { @class = "dropdown-item" })
                                 <br />
                                 @Html.ActionLink("pastries", "SearchByType", new { type = 2 }, new { @class = "dropdown-item" })
                                 <br />
-                                @Html.ActionLink("Dairy products", "SearchByType", new { type =3 }, new { @class = "dropdown-item" })
+                                @Html.ActionLink("Dairy products", "SearchByType", new { type = 3 }, new { @class = "dropdown-item" })
                                 <br />
-                                @Html.ActionLink("sweets", "SearchByType", new { type =4 }, new { @class = "dropdown-item" })
+                                @Html.ActionLink("sweets", "SearchByType", new { type = 4 }, new { @class = "dropdown-item" })
                                 <br />
                                 @Html.ActionLink("vegetables", "SearchByType", new { type = 5 }, new { @class = "dropdown-item" })
                             </div>
