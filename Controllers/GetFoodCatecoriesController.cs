@@ -10,7 +10,7 @@ namespace Online_Food_Ordering_System.Controllers
     public class GetFoodCatecoriesController : Controller
     {
         // GET: GetFoodCatecories
-        private FoodyDatabaseEntities db = new FoodyDatabaseEntities();
+        private FoodyDatabaseEntities db = new FoodyDatabaseEntities();  // will be changed to spacific name
         
         public ActionResult Index()
         {
@@ -31,9 +31,9 @@ namespace Online_Food_Ordering_System.Controllers
             return View();
         }
 
-        public ActionResult calladdtocart(int id)
+        public ActionResult calladdtocart(int id, int quantity)
         {
-            CartController.Addtocart(id);
+            CartController.Addtocart(id,quantity);
             return RedirectToAction("getFoodCategories");
         }
 

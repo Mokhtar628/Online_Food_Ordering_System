@@ -299,6 +299,7 @@
     <Content Include="Views\Welcome\WelcomePage.cshtml" />
     <Content Include="Views\GetFoodCatecories\getFoodCategories.cshtml" />
     <Content Include="Views\GetFoodCatecories\getFoodItems.cshtml" />
+    <Content Include="Views\Cart\ShowCart.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -307,8 +308,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Views\Cart\" />
     <Folder Include="Views\ErrorMessages\" />
+    <Folder Include="Views\GenerateOrderID\" />
     <Folder Include="Views\GetGategoriesOfFood\" />
     <Folder Include="Views\Navigator\" />
     <Folder Include="Views\Person\" />

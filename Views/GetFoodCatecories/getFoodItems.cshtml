@@ -50,15 +50,25 @@
                                     Price @item.price$
                                 </p>
                             </div>
+
                             <div class="col-xs-12 col-md-6">
-                                @*<a class="btn btn-success" href="@Url.Action("Addtocart", "GetFoodCatecories", new { id = item.cat_type })">Add to cart</a>*@
-                                @Html.ActionLink("addtocart", "calladdtocart", "GetFoodCatecories", new { id = item.food_id },null)
+                                @using (Html.BeginForm("calladdtocart", "GetFoodCatecories"))
+                                {
+                                    @Html.AntiForgeryToken()
+
+                                    <input type="number" name="quantity" value="1" min="1" max="10" style="margin-left:87px;" />
+                                    <input type="hidden" name="id" value="@item.food_id" />
+                        
+                                    <input type="submit" value="add" class="form-control" style="margin-left:1px;margin-top:7px;color: #fff;background-color: #5cb85c;border-color: #4cae4c;" />
+
+                                }
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             }
+            @Html.ActionLink("View Cart", "ShowCart", "Cart")
         </div>
     </div>
 

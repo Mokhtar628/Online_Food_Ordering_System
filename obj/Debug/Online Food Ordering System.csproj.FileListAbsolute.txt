@@ -228,7 +228,6 @@ D:\Faculty 1\Team 3\Second semester\SE_2\project\Online_Food_Ordering_System\Onl
 D:\Faculty 1\Team 3\Second semester\SE_2\project\Online_Food_Ordering_System\Online_Food_Ordering_System\bin\roslyn\vbc.rsp
 D:\Faculty 1\Team 3\Second semester\SE_2\project\Online_Food_Ordering_System\Online_Food_Ordering_System\bin\roslyn\VBCSCompiler.exe
 D:\Faculty 1\Team 3\Second semester\SE_2\project\Online_Food_Ordering_System\Online_Food_Ordering_System\bin\roslyn\VBCSCompiler.exe.config
-D:\Faculty 1\Team 3\Second semester\SE_2\project\Online_Food_Ordering_System\Online_Food_Ordering_System\obj\Debug\Online Food Ordering System.csprojAssemblyReference.cache
 D:\Faculty 1\Team 3\Second semester\SE_2\project\Online_Food_Ordering_System\Online_Food_Ordering_System\obj\Debug\Online Food Ordering System.csproj.CoreCompileInputs.cache
 D:\Faculty 1\Team 3\Second semester\SE_2\project\Online_Food_Ordering_System\Online_Food_Ordering_System\obj\Debug\Online Food Ordering System.csproj.CopyComplete
 D:\Faculty 1\Team 3\Second semester\SE_2\project\Online_Food_Ordering_System\Online_Food_Ordering_System\obj\Debug\Online Food Ordering System.dll
