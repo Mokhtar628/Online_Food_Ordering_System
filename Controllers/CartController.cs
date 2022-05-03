@@ -34,17 +34,19 @@ namespace Online_Food_Ordering_System.Controllers
         public ActionResult ItemsinCart(List<List<int>> placedOrder)
         {
             List<Food_Items> foodItemOrdered = new List<Food_Items>();
-            int vv = 0;
+            int indexOfplacedorder = 0;
             for (int i = 0; i <placedOrder.Count(); i++)
             {
-                vv = placedOrder[i][0];
-                var m = (from obj in databaseEntityObject.Food_Items
-                                   where obj.food_id == vv
-                                   select obj).ToList();
+                indexOfplacedorder = placedOrder[i][0];
+                var foodOnCart = (from obj in databaseEntityObject.Food_Items
+                                        where obj.food_id == indexOfplacedorder
+                                  select obj).ToList()[0];
+                foodItemOrdered.Add(foodOnCart);
               
                 //ViewBag.foodItemOrdered = foodItemOrdered;
             }
             ViewBag.foodItemOrdered = foodItemOrdered;
+
             ViewBag.totalprice= getTotalCostOfOrder(placedOrder);
             return RedirectToAction("Showcart");
         }
