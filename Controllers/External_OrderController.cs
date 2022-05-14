@@ -15,7 +15,7 @@ namespace Online_Food_Ordering_System.Controllers
         private FoodyDatabaseEntities db = new FoodyDatabaseEntities();
 
         // GET: External_Order
-        public ActionResult Index()
+        public ActionResult List_orders()
         {
             var external_Order = db.External_Order.Include(e => e.User);
             return View(external_Order.ToList());

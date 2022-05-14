@@ -16,7 +16,7 @@ namespace Online_Food_Ordering_System.Controllers
     {
         private FoodyDatabaseEntities db = new FoodyDatabaseEntities();
 
-        public ActionResult Index()
+        public ActionResult List_food()
         {
             var food_Items = db.Food_Items.Include(f => f.Category);
             return View(food_Items.ToList());
