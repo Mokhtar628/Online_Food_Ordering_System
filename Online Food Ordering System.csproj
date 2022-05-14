@@ -157,7 +157,6 @@
     <Content Include="bin\System.Web.Webpages.Razor.dll" />
     <Content Include="bin\System.Web.Webpages.Razor.xml" />
     <Content Include="bin\System.Web.Webpages.xml" />
-    <Content Include="Content\AdminHome\background.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -170,6 +169,8 @@
     <Content Include="Content\pageImages\icon.png" />
     <Content Include="Content\pageImages\moto.gif" />
     <Content Include="Content\pageImages\signBack.jpg" />
+    <Content Include="Content\showFoodStyle\JavaScript.js" />
+    <Content Include="Content\showFoodStyle\ShowFoodInCategory.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\Welcome\welcomeStyles.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -227,12 +228,15 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\ErrorMessagesController.cs" />
     <Compile Include="Controllers\External_OrderController.cs" />
     <Compile Include="Controllers\Food_ItemsController.cs" />
+    <Compile Include="Controllers\GetFoodCatecoriesController.cs" />
     <Compile Include="Controllers\NavigatorController.cs" />
     <Compile Include="Controllers\PersonController.cs" />
     <Compile Include="Controllers\SessionsController.cs" />
+    <Compile Include="Controllers\ShowFoodController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Controllers\WelcomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -289,11 +293,12 @@
     <Content Include="Views\Food_Items\Create.cshtml" />
     <Content Include="Views\Food_Items\Delete.cshtml" />
     <Content Include="Views\Food_Items\Edit.cshtml" />
+    <Content Include="Views\Food_Items\Index.cshtml" />
     <Content Include="Views\Food_Items\SearchByType.cshtml" />
+    <Content Include="Views\External_Order\Index.cshtml" />
     <Content Include="Views\Welcome\WelcomePage.cshtml" />
-    <Content Include="Views\Users\ViewAllUsers.cshtml" />
-    <Content Include="Views\Food_Items\List_food.cshtml" />
-    <Content Include="Views\External_Order\List_orders.cshtml" />
+    <Content Include="Views\GetFoodCatecories\getFoodCategories.cshtml" />
+    <Content Include="Views\GetFoodCatecories\getFoodItems.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -302,10 +307,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Views\Cart\" />
     <Folder Include="Views\ErrorMessages\" />
+    <Folder Include="Views\GetGategoriesOfFood\" />
     <Folder Include="Views\Navigator\" />
     <Folder Include="Views\Person\" />
     <Folder Include="Views\Sessions\" />
+    <Folder Include="Views\ShowFood\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
