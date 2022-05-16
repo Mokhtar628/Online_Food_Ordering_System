@@ -40,8 +40,6 @@
                             <p class="group inner list-group-item-text">
                                 preparing time: @item.preparing_time
                                 <br />
-                                available items: @item.available
-                                <br />
                                 description: @item.description
                             </p>
                             <div class="row">
@@ -59,11 +57,12 @@
             <div class="row">
                 <div class="col-xs-12 col-md-6">
                     <p class="lead">
-                        Price @ViewBag.foodItemOrdered$
+                        Total Payment: @ViewBag.totalprice $
                     </p>
                 </div>
             </div>
         </div>
+        @Html.ActionLink("Procedure your orders", "SaveCartToDataBase", "Cart",new { @class = "btn btn-info" })
     </div>
 
 </body>

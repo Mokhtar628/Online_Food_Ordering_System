@@ -233,10 +233,10 @@
     <Compile Include="Controllers\External_OrderController.cs" />
     <Compile Include="Controllers\Food_ItemsController.cs" />
     <Compile Include="Controllers\GetFoodCatecoriesController.cs" />
+    <Compile Include="Controllers\GetTotalController.cs" />
     <Compile Include="Controllers\NavigatorController.cs" />
     <Compile Include="Controllers\PersonController.cs" />
     <Compile Include="Controllers\SessionsController.cs" />
-    <Compile Include="Controllers\ShowFoodController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Controllers\WelcomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -300,6 +300,7 @@
     <Content Include="Views\GetFoodCatecories\getFoodCategories.cshtml" />
     <Content Include="Views\GetFoodCatecories\getFoodItems.cshtml" />
     <Content Include="Views\Cart\ShowCart.cshtml" />
+    <Content Include="Views\Cart\SaveCartToDataBase.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -311,6 +312,7 @@
     <Folder Include="Views\ErrorMessages\" />
     <Folder Include="Views\GenerateOrderID\" />
     <Folder Include="Views\GetGategoriesOfFood\" />
+    <Folder Include="Views\GetTotal\" />
     <Folder Include="Views\Navigator\" />
     <Folder Include="Views\Person\" />
     <Folder Include="Views\Sessions\" />

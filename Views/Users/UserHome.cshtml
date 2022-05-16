@@ -6,5 +6,7 @@
 
 <h2>UserHome @Session["id"]</h2>
 <h2>UserHome @Session["name"]</h2>
-<img src="@Url.Content(Session["img"].ToString())" alt="Alternate Text" width="50px"/>
+<h2>UserHome @Session["Email"]</h2>
+<img src="@Url.Content(Session["img"].ToString())" alt="Alternate Text" width="50px" />
 
+@Html.ActionLink("getFoodCategories", "getFoodCategories", "GetFoodCatecories", null, new { @class = "btn btn-info" })

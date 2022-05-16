@@ -286,4 +286,3 @@ E:\3rd 2nd\Online_Food_Ordering_System\Online_Food_Ordering_System\obj\Debug\Onl
 E:\3rd 2nd\Online_Food_Ordering_System\Online_Food_Ordering_System\obj\Debug\Online Food Ordering System.dll
 E:\3rd 2nd\Online_Food_Ordering_System\Online_Food_Ordering_System\obj\Debug\Online Food Ordering System.pdb
 E:\3rd 2nd\Online_Food_Ordering_System\Online_Food_Ordering_System\obj\Debug\Online Food Ordering System.csprojAssemblyReference.cache
-D:\Faculty 1\Team 3\Second semester\SE_2\project\Online_Food_Ordering_System\Online_Food_Ordering_System\obj\Debug\Online Food Ordering System.csprojAssemblyReference.cache
