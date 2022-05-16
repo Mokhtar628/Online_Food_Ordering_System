@@ -489,15 +489,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Cart\" />
-    <Folder Include="Views\ErrorMessages\" />
-    <Folder Include="Views\GetGategoriesOfFood\" />
-    <Folder Include="Views\Navigator\" />
-    <Folder Include="Views\Person\" />
-    <Folder Include="Views\Sessions\" />
-    <Folder Include="Views\ShowFood\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
