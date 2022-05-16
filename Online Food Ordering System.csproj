@@ -415,6 +415,7 @@
     <Compile Include="Controllers\External_OrderController.cs" />
     <Compile Include="Controllers\Food_ItemsController.cs" />
     <Compile Include="Controllers\GetFoodCatecoriesController.cs" />
+    <Compile Include="Controllers\GetTotalController.cs" />
     <Compile Include="Controllers\NavigatorController.cs" />
     <Compile Include="Controllers\PersonController.cs" />
     <Compile Include="Controllers\SessionsController.cs" />
@@ -482,6 +483,8 @@
     <Content Include="Views\External_Order\List_orders.cshtml" />
     <Content Include="Views\Food_Items\List_food.cshtml" />
     <Content Include="Views\Users\ViewAllUsers.cshtml" />
+    <Content Include="Views\Cart\SaveCartToDataBase.cshtml" />
+    <Content Include="Views\Cart\ShowCart.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
