@@ -157,6 +157,7 @@
     <Content Include="bin\System.Web.Webpages.Razor.dll" />
     <Content Include="bin\System.Web.Webpages.Razor.xml" />
     <Content Include="bin\System.Web.Webpages.xml" />
+    <Content Include="Content\AdminHome\background.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -280,6 +281,12 @@
     <Content Include="packages\Modernizr.2.6.2\Tools\common.ps1" />
     <Content Include="packages\Modernizr.2.6.2\Tools\install.ps1" />
     <Content Include="packages\Modernizr.2.6.2\Tools\uninstall.ps1" />
+    <Content Include=".vs\config\applicationhost.config" />
+    <Content Include=".vs\Online Food Ordering System\v15\.suo" />
+    <Content Include=".vs\Online Food Ordering System\v15\Server\sqlite3\db.lock" />
+    <Content Include=".vs\Online Food Ordering System\v15\Server\sqlite3\storage.ide" />
+    <Content Include=".vs\Online Food Ordering System\v15\Server\sqlite3\storage.ide-shm" />
+    <Content Include=".vs\Online Food Ordering System\v15\Server\sqlite3\storage.ide-wal" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="packages\bootstrap.3.0.0\Content\Content\bootstrap-theme.css" />
     <Content Include="packages\bootstrap.3.0.0\Content\Content\bootstrap-theme.min.css" />
@@ -399,7 +406,6 @@
     <Content Include="Views\Users\UserHome.cshtml" />
     <Content Include="Views\Admin\AdminHome.cshtml" />
     <Content Include="Views\Admin\Login.cshtml" />
-    <Content Include="Views\Welcome\Welcome.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -475,6 +481,7 @@
     <Content Include="Views\GetFoodCatecories\getFoodItems.cshtml" />
     <Content Include="Views\External_Order\List_orders.cshtml" />
     <Content Include="Views\Food_Items\List_food.cshtml" />
+    <Content Include="Views\Users\ViewAllUsers.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -482,15 +489,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Cart\" />
-    <Folder Include="Views\ErrorMessages\" />
-    <Folder Include="Views\GetGategoriesOfFood\" />
-    <Folder Include="Views\Navigator\" />
-    <Folder Include="Views\Person\" />
-    <Folder Include="Views\Sessions\" />
-    <Folder Include="Views\ShowFood\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
