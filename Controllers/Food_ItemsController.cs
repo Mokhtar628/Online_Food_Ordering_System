@@ -38,7 +38,7 @@ namespace Online_Food_Ordering_System.Controllers
                 food_Items.img = saveImage(ImageFile);
                 db.Food_Items.Add(food_Items);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("List_food");
             }
 
             ViewBag.cat_type = new SelectList(db.Categories, "cat_id", "name", food_Items.cat_type);
@@ -89,7 +89,7 @@ namespace Online_Food_Ordering_System.Controllers
                 food_Items.img = saveImage(ImageFile);
                 db.Entry(food_Items).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("List_food");
             }
             ViewBag.cat_type = new SelectList(db.Categories, "cat_id", "name", food_Items.cat_type);
             return View(food_Items);
@@ -116,7 +116,7 @@ namespace Online_Food_Ordering_System.Controllers
             Food_Items food_Items = db.Food_Items.Find(id);
             db.Food_Items.Remove(food_Items);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("List_food");
         }
 
         public ActionResult SearchByType(int type)
