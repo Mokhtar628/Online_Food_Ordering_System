@@ -47,14 +47,18 @@
                                 <div class="col-xs-12 col-md-6">
                                     @using (Html.BeginForm("getFoodItems", "GetFoodCatecories", FormMethod.Get))
                                     {
-                                    <a class="btn btn-success" href="@Url.Action("getFoodItems", "GetFoodCatecories", new { id = item.cat_id })">go to items</a>
+                                        <a class="btn btn-success" href="@Url.Action("getFoodItems", "GetFoodCatecories", new { id = item.cat_id })">go to items</a>
                                     }
                                 </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
             }
+            @Html.ActionLink("View Cart", "Showcart", "Cart", null, new { @class = "btn btn-info" })
+
+
         </div>
     </div>
 

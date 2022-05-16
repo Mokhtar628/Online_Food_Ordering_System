@@ -114,6 +114,7 @@ namespace Online_Food_Ordering_System.Controllers
             Session["id"] = foodyDatabaseEntities.id.ToString();
             Session["name"] = foodyDatabaseEntities.name.ToString();
             Session["img"] = foodyDatabaseEntities.img.ToString();
+            Session["Email"] = foodyDatabaseEntities.Email.ToString();
         }
 
         public ActionResult ViewAllUsers()
