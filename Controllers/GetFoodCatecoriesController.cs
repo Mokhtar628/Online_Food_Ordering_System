@@ -19,11 +19,7 @@ namespace Online_Food_Ordering_System.Controllers
         }
        
 
-        //public ActionResult calladdtocart(int id, int quantity)
-        //{
-        //    CartController.Addtocart(id, quantity);
-        //    return RedirectToAction("getFoodCategories");
-        //}
+ 
 
 
     }
