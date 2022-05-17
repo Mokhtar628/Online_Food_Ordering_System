@@ -7,7 +7,7 @@ using Online_Food_Ordering_System.Models;
 
 namespace Online_Food_Ordering_System.Controllers
 {
-    public class GetTotalController : Controller
+    public class GetTotalPriceController : Controller
     {
         private static FoodyDatabaseEntities databaseEntityObject = new FoodyDatabaseEntities();
 

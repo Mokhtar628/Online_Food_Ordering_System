@@ -40,21 +40,12 @@ namespace Online_Food_Ordering_System.Controllers
 
         private String saveImage(User user)
         {
-            string returnedFileName;
-            if (object.ReferenceEquals(user.ImageFile, null))
-            {
-                returnedFileName = "~/UsersImage/profImg.png";
-
-            }
-            else
-            {
-                string fileName = Path.GetFileNameWithoutExtension(user.ImageFile.FileName);
-                string extension = Path.GetExtension(user.ImageFile.FileName);
-                fileName = DateTime.Now.ToString("yymmssfff") + fileName + extension;
-                returnedFileName = "~/UsersImage/" + fileName;
-                fileName = Path.Combine(Server.MapPath("~/UsersImage/"), fileName);
-                user.ImageFile.SaveAs(fileName);
-            }
+            string fileName = Path.GetFileNameWithoutExtension(user.ImageFile.FileName);
+            string extension = Path.GetExtension(user.ImageFile.FileName);
+            fileName = DateTime.Now.ToString("yymmssfff") + fileName + extension;
+            string returnedFileName = "~/UsersImage/" + fileName;
+            fileName = Path.Combine(Server.MapPath("~/UsersImage/"), fileName);
+            user.ImageFile.SaveAs(fileName);
             return returnedFileName;
         }
 

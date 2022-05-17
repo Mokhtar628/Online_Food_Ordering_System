@@ -127,6 +127,23 @@ namespace Online_Food_Ordering_System.Controllers
             
         }
 
+
+
+
+        [HttpGet]
+        public ActionResult getFoodItems(int id)
+        {
+            List<Food_Items> foodItem = new List<Food_Items>();
+            foodItem = (from obj in db.Food_Items
+                        where obj.cat_type == id
+                        select obj).ToList();
+            ViewBag.foodItem = foodItem;
+            return View();
+        }
+
+
+
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
