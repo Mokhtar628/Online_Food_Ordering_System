@@ -415,11 +415,10 @@
     <Compile Include="Controllers\External_OrderController.cs" />
     <Compile Include="Controllers\Food_ItemsController.cs" />
     <Compile Include="Controllers\GetFoodCatecoriesController.cs" />
-    <Compile Include="Controllers\GetTotalController.cs" />
+    <Compile Include="Controllers\GetTotalPriceController.cs" />
     <Compile Include="Controllers\NavigatorController.cs" />
     <Compile Include="Controllers\PersonController.cs" />
     <Compile Include="Controllers\SessionsController.cs" />
-    <Compile Include="Controllers\ShowFoodController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Controllers\WelcomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -479,12 +478,12 @@
     <Content Include="Views\Food_Items\SearchByType.cshtml" />
     <Content Include="Views\Welcome\WelcomePage.cshtml" />
     <Content Include="Views\GetFoodCatecories\getFoodCategories.cshtml" />
-    <Content Include="Views\GetFoodCatecories\getFoodItems.cshtml" />
     <Content Include="Views\External_Order\List_orders.cshtml" />
     <Content Include="Views\Food_Items\List_food.cshtml" />
     <Content Include="Views\Users\ViewAllUsers.cshtml" />
     <Content Include="Views\Cart\SaveCartToDataBase.cshtml" />
     <Content Include="Views\Cart\ShowCart.cshtml" />
+    <Content Include="Views\Food_Items\getFoodItems.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -492,7 +491,15 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\ErrorMessages\" />
+    <Folder Include="Views\GetFoodItems\" />
+    <Folder Include="Views\GetGategoriesOfFood\" />
+    <Folder Include="Views\Navigator\" />
+    <Folder Include="Views\Person\" />
+    <Folder Include="Views\Sessions\" />
+    <Folder Include="Views\ShowFood\" />
+  </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>

@@ -12,20 +12,21 @@ namespace Online_Food_Ordering_System.Controllers
     {
         private FoodyDatabaseEntities databaseEntityObject = new FoodyDatabaseEntities();
         public static List<List<int>> placedOrder = new List<List<int>>();
-       
+        public static List<Food_Items> foodItemOrdered = new List<Food_Items>();
 
-        public static void Addtocart(int id,int quantity)
+
+        public ActionResult Addtocart(int id,int quantity)
         {
             
             CartController.placedOrder.Add(new List<int>{id, quantity});
-            
+            return RedirectToAction("getFoodCategories","GetFoodCatecories");
+
         }
 
 
-        [HttpGet]
+        [HttpGet] 
         public ActionResult ItemsinCart(List<List<int>> placedOrder)
         {
-            List<Food_Items> foodItemOrdered = new List<Food_Items>();
             int indexOfplacedorder = 0;
             for (int i = 0; i < placedOrder.Count(); i++)
             {
@@ -37,7 +38,7 @@ namespace Online_Food_Ordering_System.Controllers
             }
 
             ViewBag.foodItemOrdered = foodItemOrdered;
-            ViewBag.totalprice = GetTotalController.getTotalCostOfOrder(placedOrder);
+            ViewBag.totalprice = GetTotalPriceController.getTotalCostOfOrder(placedOrder);
 
             return RedirectToAction("Showcart");
         }
@@ -62,7 +63,7 @@ namespace Online_Food_Ordering_System.Controllers
             ExternalOrder.user_email = Session["Email"].ToString();
             ExternalOrder.Date = DateTime.Now;
             ExternalOrder.Status = "Completed";
-            ExternalOrder.Total_cost = GetTotalController.getTotalCostOfOrder(placedOrder);
+            ExternalOrder.Total_cost = GetTotalPriceController.getTotalCostOfOrder(placedOrder);
             databaseEntityObject.External_Order.Add(ExternalOrder);
             databaseEntityObject.SaveChanges();
 
@@ -80,7 +81,8 @@ namespace Online_Food_Ordering_System.Controllers
                 databaseEntityObject.Order_Details.Add(orderDetails);
             }
             databaseEntityObject.SaveChanges();
-
+            foodItemOrdered.Clear();
+            placedOrder.Clear();
 
             return View();
 
