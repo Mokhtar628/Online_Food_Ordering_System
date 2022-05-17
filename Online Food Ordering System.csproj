@@ -494,6 +494,8 @@
   <ItemGroup>
     <Folder Include="Views\ErrorMessages\" />
     <Folder Include="Views\GetFoodItems\" />
+    <Folder Include="Views\Cart\" />
+    <Folder Include="Views\ErrorMessages\" />
     <Folder Include="Views\GetGategoriesOfFood\" />
     <Folder Include="Views\Navigator\" />
     <Folder Include="Views\Person\" />
