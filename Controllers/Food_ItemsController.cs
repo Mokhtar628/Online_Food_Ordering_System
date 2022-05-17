@@ -16,7 +16,7 @@ namespace Online_Food_Ordering_System.Controllers
     {
         private FoodyDatabaseEntities db = new FoodyDatabaseEntities();
 
-        public ActionResult Index()
+        public ActionResult List_food()
         {
             var food_Items = db.Food_Items.Include(f => f.Category);
             return View(food_Items.ToList());
@@ -38,7 +38,7 @@ namespace Online_Food_Ordering_System.Controllers
                 food_Items.img = saveImage(ImageFile);
                 db.Food_Items.Add(food_Items);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("List_food");
             }
 
             ViewBag.cat_type = new SelectList(db.Categories, "cat_id", "name", food_Items.cat_type);
@@ -89,7 +89,7 @@ namespace Online_Food_Ordering_System.Controllers
                 food_Items.img = saveImage(ImageFile);
                 db.Entry(food_Items).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("List_food");
             }
             ViewBag.cat_type = new SelectList(db.Categories, "cat_id", "name", food_Items.cat_type);
             return View(food_Items);
@@ -116,7 +116,7 @@ namespace Online_Food_Ordering_System.Controllers
             Food_Items food_Items = db.Food_Items.Find(id);
             db.Food_Items.Remove(food_Items);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("List_food");
         }
 
         public ActionResult SearchByType(int type)
@@ -126,6 +126,23 @@ namespace Online_Food_Ordering_System.Controllers
             return View(db.Food_Items.Where(r => r.cat_type ==type).ToList());
             
         }
+
+
+
+
+        [HttpGet]
+        public ActionResult getFoodItems(int id)
+        {
+            List<Food_Items> foodItem = new List<Food_Items>();
+            foodItem = (from obj in db.Food_Items
+                        where obj.cat_type == id
+                        select obj).ToList();
+            ViewBag.foodItem = foodItem;
+            return View();
+        }
+
+
+
 
         protected override void Dispose(bool disposing)
         {

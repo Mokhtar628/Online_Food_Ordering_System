@@ -1,0 +1,99 @@
+﻿@model IEnumerable<Online_Food_Ordering_System.Models.Food_Items>
+
+    @{
+        Layout = null;
+    }
+
+    <!DOCTYPE html>
+
+    <html style=" overflow:visible">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>@ViewBag.Title</title>
+        <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+        <link href="~/Content/NavBarAndFooter/NavBatAndFooterStyles.css" rel="stylesheet" type="text/css" />
+        <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <style>
+            .card mb-3 {
+                padding: 20px;
+            }
+
+            .card-img {
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+        <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    </head>
+    <body>
+        <div class="navbar navbar-fixed-top nav-style">
+            <div class="container">
+                <div class="navbar-header">
+                    <span class="navbar-brand"><img src="~/Content/pageImages/icon.png" alt="Foody" style="width:40px" /> Foody</span>
+                    <span class="nav-buttons">
+                        @Html.ActionLink("Add Food", "Create")
+                    </span>
+                    <span class="nav-buttons">
+                        @Html.ActionLink("Home", "GoToHome", "Admin")
+                    </span>
+                    <span class="nav-buttons">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Food categories
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    @Html.ActionLink("meat", "SearchByType", new { type = 1 }, new { @class = "dropdown-item" })
+                                    <br />
+                                    @Html.ActionLink("pastries", "SearchByType", new { type = 2 }, new { @class = "dropdown-item" })
+                                    <br />
+                                    @Html.ActionLink("Dairy products", "SearchByType", new { type = 3 }, new { @class = "dropdown-item" })
+                                    <br />
+                                    @Html.ActionLink("sweets", "SearchByType", new { type = 4 }, new { @class = "dropdown-item" })
+                                    <br />
+                                    @Html.ActionLink("vegetables", "SearchByType", new { type = 5 }, new { @class = "dropdown-item" })
+                                </div>
+                            </li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            @if (Model.Count() == 0)
+            {
+                <p colspan="3" style="color:red">
+                    No Match Document
+                </p>
+            }
+            else
+            {
+                foreach (var item in Model)
+                {
+                    <div class="card mb-3" style="max-width: 540px; margin:50px 0;">
+                        <div class="row no-gutters">
+                            <div class="col-md-4" style="width=50px">
+                                <img src="@Url.Content(item.img)" class="card-img">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h4 class="card-title"><b>@item.name</b></h4>
+                                    <p class="card-text">@item.description</p>
+                                    <p class="card-text"><small class="text-muted">@item.price</small></p>
+
+                                    @Html.ActionLink("Edit", "Edit", new { id = item.food_id }, new { @class = "btn btn-success" })
+                                    @Html.ActionLink("Delete", "Delete", new { id = item.food_id }, new { @class = "btn btn-primary" })
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+
+        </div>
+        <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+        <script src="~/Scripts/bootstrap.min.js"></script>
+    </body>
+</html>

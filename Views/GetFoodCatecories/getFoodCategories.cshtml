@@ -45,9 +45,9 @@
                                     </p>
                                 </div>
                                 <div class="col-xs-12 col-md-6">
-                                    @using (Html.BeginForm("getFoodItems", "GetFoodCatecories", FormMethod.Get))
+                                    @using (Html.BeginForm("getFoodItems", "Food_Items", FormMethod.Get))
                                     {
-                                        <a class="btn btn-success" href="@Url.Action("getFoodItems", "GetFoodCatecories", new { id = item.cat_id })">go to items</a>
+                                        <a class="btn btn-success" href="@Url.Action("getFoodItems", "Food_Items", new { id = item.cat_id })">go to items</a>
                                     }
                                 </div>
 
@@ -56,7 +56,8 @@
                     </div>
                 </div>
             }
-            @Html.ActionLink("View Cart", "ShowCart", "Cart")
+            @Html.ActionLink("View Cart", "Showcart", "Cart", null, new { @class = "btn btn-info" })
+
 
         </div>
     </div>

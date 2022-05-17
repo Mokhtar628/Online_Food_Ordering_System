@@ -178,7 +178,6 @@ E:\faculty\level 3\second term\sw2\Online_Food_Ordering_System\Online_Food_Order
 E:\faculty\level 3\second term\sw2\Online_Food_Ordering_System\Online_Food_Ordering_System\obj\Debug\Online Food Ordering System.dll
 E:\faculty\level 3\second term\sw2\Online_Food_Ordering_System\Online_Food_Ordering_System\obj\Debug\Online Food Ordering System.pdb
 E:\faculty\level 3\second term\sw2\Online_Food_Ordering_System\Online_Food_Ordering_System\obj\Debug\Online Food Ordering System.csprojAssemblyReference.cache
-X:\FCIH Mohammed\level 3 semester 2\Projects\Online_Food_Ordering_System\Online_Food_Ordering_System\obj\Debug\Online Food Ordering System.csprojAssemblyReference.cache
 D:\Faculty 1\Team 3\Second semester\SE_2\project\Online_Food_Ordering_System\Online_Food_Ordering_System\bin\Online Food Ordering System.dll.config
 D:\Faculty 1\Team 3\Second semester\SE_2\project\Online_Food_Ordering_System\Online_Food_Ordering_System\bin\Online Food Ordering System.dll
 D:\Faculty 1\Team 3\Second semester\SE_2\project\Online_Food_Ordering_System\Online_Food_Ordering_System\bin\Online Food Ordering System.pdb
