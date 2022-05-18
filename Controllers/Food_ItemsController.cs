@@ -14,17 +14,17 @@ namespace Online_Food_Ordering_System.Controllers
 {
     public class Food_ItemsController : Controller
     {
-        private FoodyDatabaseEntities db = new FoodyDatabaseEntities();
+        private FoodyDatabaseEntities databaseEntities = new FoodyDatabaseEntities();
 
         public ActionResult List_food()
         {
-            var food_Items = db.Food_Items.Include(f => f.Category);
+            var food_Items = databaseEntities.Food_Items.Include(f => f.Category);
             return View(food_Items.ToList());
         }
 
         public ActionResult Create()
         {
-            ViewBag.cat_type = new SelectList(db.Categories, "cat_id", "name");
+            ViewBag.cat_type = new SelectList(databaseEntities.Categories, "cat_id", "name");
             return View();
         }
 
@@ -36,32 +36,23 @@ namespace Online_Food_Ordering_System.Controllers
             if (ModelState.IsValid)
             {
                 food_Items.img = saveImage(ImageFile);
-                db.Food_Items.Add(food_Items);
-                db.SaveChanges();
+                databaseEntities.Food_Items.Add(food_Items);
+                databaseEntities.SaveChanges();
                 return RedirectToAction("List_food");
             }
 
-            ViewBag.cat_type = new SelectList(db.Categories, "cat_id", "name", food_Items.cat_type);
+            ViewBag.cat_type = new SelectList(databaseEntities.Categories, "cat_id", "name", food_Items.cat_type);
             return View(food_Items);
         }
 
         private string saveImage(HttpPostedFileBase ImageFile)
         {    
-            string returnedFileName;
-            if (object.ReferenceEquals(ImageFile, null))
-            {
-                returnedFileName = "~/UsersImage/profImg.png";
-
-            }
-            else
-            {
-                string fileName = Path.GetFileNameWithoutExtension(ImageFile.FileName);
-                string extension = Path.GetExtension(ImageFile.FileName);
-                fileName = DateTime.Now.ToString("yymmssfff") + fileName + extension;
-                returnedFileName = "~/Food/" + fileName;
-                fileName = Path.Combine(Server.MapPath("~/Food/"), fileName);
-                ImageFile.SaveAs(fileName);
-            }
+            string fileName = Path.GetFileNameWithoutExtension(ImageFile.FileName);
+            string extension = Path.GetExtension(ImageFile.FileName);
+            fileName = DateTime.Now.ToString("yymmssfff") + fileName + extension;
+            string returnedFileName = "~/Food/" + fileName;
+            fileName = Path.Combine(Server.MapPath("~/Food/"), fileName);
+            ImageFile.SaveAs(fileName);
             return returnedFileName;
         }
 
@@ -71,12 +62,12 @@ namespace Online_Food_Ordering_System.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Food_Items food_Items = db.Food_Items.Find(id);
+            Food_Items food_Items = databaseEntities.Food_Items.Find(id);
             if (food_Items == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.cat_type = new SelectList(db.Categories, "cat_id", "name", food_Items.cat_type);
+            ViewBag.cat_type = new SelectList(databaseEntities.Categories, "cat_id", "name", food_Items.cat_type);
             return View(food_Items);
         }
 
@@ -87,11 +78,11 @@ namespace Online_Food_Ordering_System.Controllers
             if (ModelState.IsValid)
             {
                 food_Items.img = saveImage(ImageFile);
-                db.Entry(food_Items).State = EntityState.Modified;
-                db.SaveChanges();
+                databaseEntities.Entry(food_Items).State = EntityState.Modified;
+                databaseEntities.SaveChanges();
                 return RedirectToAction("List_food");
             }
-            ViewBag.cat_type = new SelectList(db.Categories, "cat_id", "name", food_Items.cat_type);
+            ViewBag.cat_type = new SelectList(databaseEntities.Categories, "cat_id", "name", food_Items.cat_type);
             return View(food_Items);
         }
 
@@ -101,7 +92,7 @@ namespace Online_Food_Ordering_System.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Food_Items food_Items = db.Food_Items.Find(id);
+            Food_Items food_Items = databaseEntities.Food_Items.Find(id);
             if (food_Items == null)
             {
                 return HttpNotFound();
@@ -113,17 +104,17 @@ namespace Online_Food_Ordering_System.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Food_Items food_Items = db.Food_Items.Find(id);
-            db.Food_Items.Remove(food_Items);
-            db.SaveChanges();
+            Food_Items food_Items = databaseEntities.Food_Items.Find(id);
+            databaseEntities.Food_Items.Remove(food_Items);
+            databaseEntities.SaveChanges();
             return RedirectToAction("List_food");
         }
 
         public ActionResult SearchByType(int type)
         {
 
-            var food_Items = db.Food_Items.Include(f => f.Category);
-            return View(db.Food_Items.Where(r => r.cat_type ==type).ToList());
+            var food_Items = databaseEntities.Food_Items.Include(f => f.Category);
+            return View(databaseEntities.Food_Items.Where(r => r.cat_type ==type).ToList());
             
         }
 
@@ -134,7 +125,7 @@ namespace Online_Food_Ordering_System.Controllers
         public ActionResult getFoodItems(int id)
         {
             List<Food_Items> foodItem = new List<Food_Items>();
-            foodItem = (from obj in db.Food_Items
+            foodItem = (from obj in databaseEntities.Food_Items
                         where obj.cat_type == id
                         select obj).ToList();
             ViewBag.foodItem = foodItem;
@@ -148,7 +139,7 @@ namespace Online_Food_Ordering_System.Controllers
         {
             if (disposing)
             {
-                db.Dispose();
+                databaseEntities.Dispose();
             }
             base.Dispose(disposing);
         }
